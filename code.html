@@ -2,17 +2,43 @@
 <html>
 	<head>
         <link rel="stylesheet" href="assets/css/main3.css" />
-		<title>Prologue by HTML5 UP</title>
+		<title>CrackTheCode</title>
+        <script type="text/javascript">
+            function test_str() {
+                var str =
+                    document.getElementById("t1").value;
+                if (str === "-82")
+                    window.location.replace("https://smijal.github.io/valentines.html")
+                else
+                    alert ("Incorrect")
+            }
+        </script>
 	</head>
-    <body class="is-preload">
-        <div class="iframe-container">
-            <h2 class="center"><b>HOW TO OBTAIN THE SECRET CODE</b></h2>
-            <p>Send email to <a href="mailto:hazardeden1997@gmail.com">hazardeden1997@gmail.com</a> with the following content:</p>
-            <p>Subject: Full name of the <b>author</b> of You Can Heal Your Life (lowercase)</p>
-            <p>Body: Last word on page 69 (lowercase)</p>
-            <div class="iframe-container">
-                <iframe src="https://free.timeanddate.com/countdown/i8pct7ck/n5223/cf12/cm0/cu4/ct0/cs0/ca0/cr0/ss0/cac000/cpc000/pcfff/tcfff/fs100/szw320/szh135/tatTIME%20LEFT/tac000/tptTIME%20IS%20UP!!!/tpc000/mat-/mac000/mptApril%20pomina%20ti%20magare%20ostana/mpc000/iso2023-02-14T00:00:00" allowtransparency="true" frameborder="0" width="116" height="69"></iframe>
-            </div>
+    <body>
+        <h2 class="center"><b>HOW TO OBTAIN THE SECRET CODE</b></h2>
+        <p><br></p> 
+        <div class="center"><div class="element">
+            <p><i>Send email to <a href="mailto:hazardeden1997@gmail.com">hazardeden1997@gmail.com</a> with the following content:</i></p>
+            <p><u>Subject:</u> Full name of the <b>author</b> of You Can Heal Your Life (lowercase)</p>
+            <p><u>Body:</u> Word 25 counting from the bottom on page 69 (lowercase)</p>
+        </div></div>
+        <div class="center">
+            <br><iframe src="https://free.timeanddate.com/countdown/i8pct7ck/n5223/cf12/cm0/cu4/ct0/cs0/ca0/cr0/ss0/cac000/cpc000/pcfff/tcfff/fs100/szw320/szh135/tatTIME%20LEFT/tac000/tptTIME%20IS%20UP!!!/tpc000/mat-/mac000/mptApril%20pomina%20ti%20magare%20ostana/mpc000/iso2023-02-14T00:00:00" allowtransparency="true" frameborder="0" width="116" height="69"></iframe>
+        </div>
+
+        <div class="center">
+            <p>
+                Secret Code:
+                <input type="text" 
+                    placeholder="Hint: Subtract"
+                    id="t1" />
+                <br/>
+                <br/>
+                <input type="button"
+                    value="Check" 
+                    onclick="test_str()" />
+                <br/>
+            </p>
         </div>
     </body>
 </html>
