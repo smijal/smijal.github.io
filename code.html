@@ -7,10 +7,40 @@
             function test_str() {
                 var str =
                     document.getElementById("t1").value;
-                if (str === "-82")
-                    window.location.replace("https://smijal.github.io/valentines.html")
-                else
-                    alert ("Incorrect")
+                var today = new Date();
+                var requiredDate = new Date(2023, 1, 9);
+
+                if(!lock_page()){
+                    if (str === "-82"){
+                        alert ("Congratulations! You guessed the correct number!\nEnjoy your present <3");
+                        window.open("https://smijal.github.io/valentines.html");
+                    }
+                    else
+                        alert ("Incorrect. Try again.")
+                }
+            }
+
+            function lock_page(){
+                var today = new Date();
+                var requiredDate = new Date(2023, 1, 9);
+                
+                if(requiredDate > today){
+                    alert ("This page locked until " + requiredDate.toISOString().slice(0, 10) + "\nCome back later.")
+                    return true;
+                }
+                    
+                return false;
+            }
+
+            function hint_func(){
+                if(!lock_page()){
+                    window.open("https://www.surveymonkey.com/r/7QNSD7C")
+                }
+                else{
+                    window.open("https://www.youtube.com/watch?v=8CBjKLGwLqE")
+                }
+                    
+                
             }
         </script>
 	</head>
@@ -37,7 +67,11 @@
                 <input type="button"
                     value="Check" 
                     onclick="test_str()" />
+                <input type="button"
+                    value="Hint" 
+                    onclick="hint_func()" />    
                 <br/>
+
             </p>
         </div>
     </body>
