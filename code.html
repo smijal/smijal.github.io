@@ -7,9 +7,6 @@
             function test_str() {
                 var str =
                     document.getElementById("t1").value;
-                var today = new Date();
-                alert (today);
-                var requiredDate = new Date(2023, 1, 10, 11, 0, 0);
 
                 if(!lock_page()){
                     if (str === "-82"){
@@ -23,10 +20,11 @@
 
             function lock_page(){
                 var today = new Date();
-                var requiredDate = new Date(2023, 1, 9);
-                
+                var requiredDate = new Date(2023, 1, 11, 17);
+
                 if(requiredDate > today){
-                    alert ("This page locked until " + requiredDate.toISOString().slice(0, 10) + "\nCome back later.")
+                    var displayDate = new Date(2023,1,12)
+                    alert ("This page locked until " + displayDate.toISOString().slice(0, 10) + "\nCome back later.")
                     return true;
                 }
                     
@@ -50,7 +48,7 @@
         <p><br></p> 
         <div class="center"><div class="element">
             <p><i>Send email to <a href="mailto:hazardeden1997@gmail.com">hazardeden1997@gmail.com</a> with the following content:</i></p>
-            <p><u>Subject:</u> Full name of the <b>author</b> of You Can Heal Your Life (lowercase)</p>
+            <p><u>Subject:</u> Full english name of the <b>author</b> of You Can Heal Your Life (lowercase)</p>
             <p><u>Body:</u> Word 25 counting from the bottom on page 69 (lowercase)</p>
         </div></div>
         <div class="center">
